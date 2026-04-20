@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm yêu thích | FashionHub</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">FASHION<span>HUB</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="#" class="active">Yêu thích</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fa-solid fa-cart-shopping" id="cart-icon" onclick="window.location.href='cart.html'"><span>0</span></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </nav>
+
+    <main class="container" style="display: block;"> <h2 style="margin-bottom: 30px; text-align: center;">❤️ Danh sách yêu thích của tôi</h2>
+        
+        <section class="products-grid" id="wishlist-list">
+            </section>
+
+        <div id="empty-wishlist" style="display:none; text-align: center; padding: 100px 0;">
+            <i class="fa-solid fa-heart-crack" style="font-size: 50px; color: #ccc;"></i>
+            <p style="margin-top: 20px; color: #666;">Bạn chưa thích sản phẩm nào.</p>
+            <a href="index.html" class="btn-buy-now" style="display: inline-block; margin-top: 20px; text-decoration: none; padding: 10px 30px;">Tiếp tục mua sắm</a>
+        </div>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./wishlist.js"></script>
+</body>
+</html>

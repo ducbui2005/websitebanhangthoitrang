@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bộ Sưu Tập | FashionHub</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">FASHION<span>HUB</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="collections.html" class="active">Bộ sưu tập</a></li>
+        </ul>
+        <div class="nav-icons">
+             <a href="wishlist.html" style="position: relative; color: inherit; text-decoration: none;">
+                <i class="fa-regular fa-heart"><span class="wishlist-badge">0</span></i>
+            </a>
+            <a href="cart.html" style="position: relative; color: inherit; text-decoration: none;">
+                <i class="fa-solid fa-cart-shopping"><span class="cart-badge">0</span></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="wishlist-container">
+        <h2 class="wishlist-header">Khám Phá <span>Bộ Sưu Tập</span></h2>
+
+        <div class="collections-grid">
+            <div class="collection-card" onclick="filterByCollection('summer')">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070&auto=format&fit=crop" alt="Summer">
+                <div class="collection-overlay">
+                    <h3>SUMMER VIBES 2026</h3>
+                    <p>Những thiết kế năng động cho mùa hè rực rỡ</p>
+                    <button class="btn-explore">KHÁM PHÁ NGAY</button>
+                </div>
+            </div>
+
+            <div class="collection-card" onclick="filterByCollection('office')">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=1995&auto=format&fit=crop" alt="Office">
+                <div class="collection-overlay">
+                    <h3>ELEGANT OFFICE</h3>
+                    <p>Phong cách công sở thanh lịch và sang trọng</p>
+                    <button class="btn-explore">KHÁM PHÁ NGAY</button>
+                </div>
+            </div>
+
+            <div class="collection-card" onclick="filterByCollection('streetwear')">
+                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1974&auto=format&fit=crop" alt="Streetwear">
+                <div class="collection-overlay">
+                    <h3>STREET STYLE</h3>
+                    <p>Đậm chất cá tính và phá cách</p>
+                    <button class="btn-explore">KHÁM PHÁ NGAY</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./data.js"></script>
+    <script>
+        // Hàm này sẽ chuyển hướng về trang chủ và lọc sản phẩm theo category
+        function filterByCollection(category) {
+            localStorage.setItem('filterCategory', category);
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

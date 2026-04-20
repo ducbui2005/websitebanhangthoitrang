@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán | FashionHub</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">FASHION<span>HUB</span></div>
+    </nav>
+
+    <main class="wishlist-container">
+        <h2 class="wishlist-header">Thông tin <span>Thanh toán</span></h2>
+        
+        <div class="checkout-wrapper" style="display: flex; gap: 30px;">
+            <div class="checkout-form" style="flex: 1.5; background: #fff; padding: 30px; border-radius: 8px;">
+                <h3>Thông tin giao hàng</h3>
+                <form id="form-checkout" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <input type="text" placeholder="Họ và tên" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <input type="tel" placeholder="Số điện thoại" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <input type="email" placeholder="Email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <textarea placeholder="Địa chỉ nhận hàng (Số nhà, tên đường, xã/phường...)" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; height: 100px;"></textarea>
+                    
+                    <h3 style="margin-top: 15px;">Phương thức thanh toán</h3>
+                    <div style="display: flex; gap: 15px;">
+                        <label style="cursor:pointer;"><input type="radio" name="pay" checked> COD (Tiền mặt)</label>
+                        <label style="cursor:pointer;"><input type="radio" name="pay"> Chuyển khoản</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="order-summary" style="flex: 1; background: #fff; padding: 30px; border-radius: 8px; height: fit-content;">
+                <h3>Đơn hàng của bạn</h3>
+                <div id="checkout-items" style="margin: 20px 0; border-bottom: 1px solid #eee; max-height: 300px; overflow-y: auto;">
+                    </div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px;">
+                    <span>Tổng tiền:</span>
+                    <span id="checkout-total" style="color: #ee4d2d;">0đ</span>
+                </div>
+                <button type="submit" form="form-checkout" class="btn-buy-now" style="width: 100%; margin-top: 20px; padding: 15px;">XÁC NHẬN ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./checkout.js"></script>
+</body>
+</html>

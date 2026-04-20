@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store | Modern E-commerce</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+    <div class="loader-content">
+        <div class="logo-loader">FASHION<span>HUB</span></div>
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+</div>
+   <nav class="navbar">
+    <div class="logo">FASHION<span>HUB</span></div>
+    <ul class="nav-links">
+        <li><a href="./main.html" class="active">Trang chủ</a></li>
+        <li><a href="./product.html">Sản phẩm</a></li>
+        <li><a href="./collection.html">Bộ sưu tập</a></li>
+    </ul>
+    <div class="nav-icons">
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div id="search-suggestions" class="search-suggestions"></div>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <a href="wishlist.html">
+                <i class="fa-regular fa-heart" id="wishlist-icon"><span>0</span></i>
+            </a>
+            <div class="nav-dropdown" id="mini-wishlist">
+                <p class="empty-msg">Chưa có sản phẩm yêu thích</p>
+            </div>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"><span>0</span></i>
+            </a>
+            <div class="nav-dropdown" id="mini-cart">
+                <p class="empty-msg">Giỏ hàng trống</p>
+            </div>
+        </div>
+
+        <i class="fa-regular fa-user" id="login-btn"></i>
+    </div>
+</nav>
+    <div class="slider-container">
+    <div class="slider-wrapper" id="slider-wrapper">
+        <div class="slide active">
+            <img src="https://wallpaperaccess.com/full/10861085.png" alt="Summer Collection">
+            <div class="slide-content">
+                <h2>NEW ARRIVALS 2026</h2>
+                <p>Khám phá phong cách thời trang dẫn đầu xu hướng.</p>
+                <a href="products.html" class="btn-shop-now">MUA NGAY</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/951/412/small_2x/men-suit-for-business-working-concept-businessman-suit-background-generative-ai-free-photo.jpeg" alt="Summer Collection">
+            <div class="slide-content">
+                <h2>NEW ARRIVALS 2026</h2>
+                <p>Khám phá phong cách thời trang dẫn đầu xu hướng.</p>
+                <a href="products.html" class="btn-shop-now">MUA NGAY</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://t4.ftcdn.net/jpg/05/96/62/65/360_F_596626503_jrzjZNYStDexiWxQFqO7oCh6M8PdMlJs.jpg" alt="Summer Collection">
+            <div class="slide-content">
+                <h2>NEW ARRIVALS 2026</h2>
+                <p>Khám phá phong cách thời trang dẫn đầu xu hướng.</p>
+                <a href="products.html" class="btn-shop-now">MUA NGAY</a>
+            </div>
+        </div>
+        </div>
+    
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+    <script src="./data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
